@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vildmarkens Zoo</title>
+    <link rel="stylesheet" href="style.css"> <!-- Länkar till CSS-filen -->
+</head>
+<body>
+
+    <!-- HEADER med titel och navigering -->
+    <header>
+        <div class="header-left">
+            <h1>Vildmarkens Zoo</h1> <!-- Sidans rubrik -->
+
+            <nav>
+                <ul>
+                    <li><a href="#">Hem</a></li>
+                    <li><a href="#">Djur</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+         <img src="img/Logo.png" alt="Logo" class="header-img">
+
+    </header>
+
+    <!-- HUVUDDEL: innehåller vänster (sökfält) och höger (djur) -->
+    <main>
+        <!-- Vänster sektion: sökfält -->
+        <aside class="sidebar">
+            <h2>Sök djur</h2>
+             <!-- Formulär för sökning -->
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Sök efter namn...">
+                <button type="submit">Sök</button>
+            </form>
+            
+            <!-- Filter och sortering (visuellt) -->
+            <div class="filters">
+                <h3>Filtrering</h3>
+                <select>
+                    <option>Alla typer</option>
+                    <option>Kattdjur</option>
+                    <option>Hästdjur</option>
+                    <option>Däggdjur</option>
+                    <option>Mårddjur</option>
+                    <option>Fågeldjur</option>
+                    <option>Primater</option>
+                </select>
+            </div>
+
+            <div class="sorting">
+                <h3>Sortering</h3>
+                <select>
+                    <option>Alfabetiskt</option>
+                    <option>Född nyast → äldst</option>
+                    <option>Född äldst → nyast</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Höger sektion: alla djurkort -->
+        <section class="animals">
+            <div class="animal-card" onclick="showInfo('Jens', 'Björn', 'Brun', 'Allätare som går i ide under vintern', 2018)">
+                <img src="img/bear-8845470_640.jpg" alt="Björnen Jens">
+                <h3>Jens</h3>
+                <p>Björn</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Esmeralda', 'Utter', 'Grå', 'Är utmärkt anpassad för ett liv i vatten med simhud mellan tårna och en tät päls', 2021)">
+                <img src="img/otter-7953030_640.jpg" alt="Uttern Esmeralda">
+                <h3>Esmeralda</h3>
+                <p>Utter</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Hans', 'Gorilla', 'Svart/Brun', 'Stora, växtätande primater som lever i grupp', 1994)">
+                <img src="img/gorilla-3606881_640.jpg" alt="Gorillan Hans">
+                <h3>Hans</h3>
+                <p>Gorilla</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Sissi', 'Snöleopard', 'Svart/Vit', 'Ett skyggt och ensamlevande kattdjur', 2025)">
+                <img src="img/baby-snow-leopard-8132690_640.jpg" alt="Snöleoparden Sissi">
+                <h3>Sissi</h3>
+                <p>Snöleopard</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Leonard', 'Lejon', 'Gul/Brun', 'Ett starkt rovdjur från Afrika', 2018)">
+                <img src="img/lion-7705694_640.jpg" alt="Lejonet Leonard">
+                <h3>Leonard</h3>
+                <p>Lejon</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Elisabet', 'Elefant', 'Grå', 'Ett klokt och stort djur', 1975)">
+                <img src="img/elefant-2156410_640.jpg" alt="Elefanten Elisabet">
+                <h3>Elisabet</h3>
+                <p>Elefant</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Sara', 'Säl', 'Grå', 'Marina däggdjur som lever i kolonier längs våra kuster', 2014)">
+                <img src="img/seal-6855840_640.jpg" alt="Sälen Sara">
+                <h3>Sara</h3>
+                <p>Säl</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Markus', 'Surikat', 'Gul', 'Ett litet, socialt däggdjur som lever i kolonier i öken', 2020)">
+                <img src="img/meerkat-7465819_640.jpg" alt="Surikaten Markus">
+                <h3>Markus</h3>
+                <p>Surikat</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Penny', 'Pingvin', 'Grå/Vit', 'Är anpassade för simning och dykning', 2010)">
+                <img src="img/penguin-7553626_640.jpg" alt="Pingvinen Penny">
+                <h3>Penny</h3>
+                <p>Pingvin</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Göran', 'Gibbon', 'Svart/Vit', 'Känd för sin snabba förflyttning i träden genom att svinga sig från gren till gren', 2002)">
+                <img src="img/gibbon-8573117_640.jpg" alt="Gibbonen Göran">
+                <h3>Göran</h3>
+                <p>Gibbon</p>
+            </div>
+            
+            <div class="animal-card" onclick="showInfo('Rolle', 'Giraff', 'Gul/Brun', 'Ett afrikanskt däggdjur som kan bli över fem meter högt', 2018)">
+                <img src="img/giraffe-3556956_640.jpg" alt="Giraffen Rolle">
+                <h3>Rolle</h3>
+                <p>Giraff</p>
+            </div>
+
+            <div class="animal-card" onclick="showInfo('Zoe', 'Zebra', 'Svart/Vit', 'Snabbt djur med ränder', 2015)">
+                <img src="img/zebra-5220420_640.jpg" alt="Zebran Zoe">
+                <h3>Zoe</h3>
+                <p>Zebra</p>
+            </div>
+        </section>        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Vildmarkens Zoo</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Länkar till JavaScript -->
+</body>
+</html>
